@@ -1,6 +1,7 @@
 # posdBackend
-
-Example of Entity object:
+# To start on local:
+node server.js
+# Example of Entity object:
 {
     "entity": {
         "PartitionKey": "hometasks",
