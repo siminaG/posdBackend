@@ -103,6 +103,19 @@ app.get('/get/entity', (req, res) => {
     }
 })
 
+app.get('/get/allEntities', (req, res) => {
+    let tableName = req.query.name;
+    if(tableName){
+        tableService.queryEntities(tableName, null, null,
+            function(error, result, response){
+                if(!error){
+                    console.log(result);
+                };
+                res.send(result);
+            })
+    }
+})
+
 app.delete('/delete/entity', (req, res) => {
     let entity = {};
     let tableName = req.query.name;
